@@ -1,0 +1,5 @@
+# Hidden Performance Issue in Haskell's Data.List.sort
+
+This repository demonstrates a subtle performance issue related to Haskell's `Data.List.sort` function. While generally efficient, its O(n log n) time complexity can become a bottleneck when dealing with extremely large lists.  The example provided shows a simple sort, which doesn't immediately reveal the potential performance problem.
+
+The `bug.hs` file contains the initial code showcasing the use of `sort`.  The `bugSolution.hs` file offers an alternative approach (depending on the data properties), which might lead to improved performance in certain scenarios.  For instance, if the data is nearly sorted, using insertion sort might offer better performance. For data that is randomly distributed, using a more optimized mergesort implementation may be preferred.
